@@ -1,0 +1,596 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: #EBCDCD;
+    color: #5e1e2c;
+    line-height: 1.6;
+  }
+  
+  /* Navbar */
+  .navbar {
+    width: 100%; /* full viewport width */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #92233e;
+    padding: 10px 30px;
+    position: relative;
+  }
+  
+  .nav-left,
+  .nav-right {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+  }  
+  
+  /* Hero */
+  .hero {
+    text-align: center;
+    padding: 3rem 1rem;
+    position: relative;
+    padding: 50px;
+    margin-top: 200px;
+    margin-bottom: 280px;
+  }
+  
+  .hero h1 {
+    font-size: 7rem;
+    color: #811d3c;
+    font-family: 'Cinzel Decorative', cursive;
+  }
+
+  .logo-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px; /* adjust as needed */
+    gap: 1rem;
+  }
+  
+  .logo-text {
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 7rem;
+    color: #92233e;
+    z-index: 3;
+  }
+  
+  .moon {
+    width: 8.5rem;
+    height: 8.5rem;
+    background: #92233e;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+    transform: scale(3.5) rotate(35deg); /* rotate more for upward-left curve */
+    transform-origin: center; /* pivot from center for natural tilt */
+  }
+  
+  .moon::before {
+    content: "";
+    position: absolute;
+    width: 8.5rem;
+    height: 8.5rem;
+    background: #EBCDCD; 
+    border-radius: 50%;
+    right: 2.3rem; 
+    top: 0;
+    z-index: 1;
+  }
+  
+  
+  /* Main Content Layout */
+ 
+  .grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    width: 90vw;
+    max-width: 1200px;
+    margin: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  /* User Info */
+  .user-info {
+    background: #c17676;
+    border-radius: 15px;
+    padding: 1rem;
+    color: white;
+    margin-bottom: 1rem;
+    width: 720px;
+    height: 450px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .cycle-day span {
+    font-size: 4rem;
+    font-weight: bold;
+    font-family: 'Montserrat Alternates', serif;
+  }
+
+  .cycle-day{
+    font-size: 3rem;
+    padding: 20px;
+    margin-top: 30px;
+    font-family: 'Montserrat Alternates', serif;
+  }
+
+  .greeting{
+    text-align: left;
+    font-family: 'Montserrat', serif;
+  }
+
+  .phase{
+    margin-top: 50px;
+    font-size: 1.5rem;
+    padding: 5px;
+    font-family: 'Montserrat', serif;
+  }
+  
+  /* Statistics Section */
+  .stats {
+    background: #811d3c;
+    color: white;
+    padding: 1rem;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    width: 900px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .stats ul {
+    list-style: none;
+    padding-left: 1rem;
+    font-family: 'Montserrat', serif;
+  }
+  
+  /* Last Period */
+  .last-period {
+    background: #e4959e;
+    padding: 1rem;
+    border-radius: 15px;
+    color: white;
+    margin-bottom: 1rem;
+    height: 350px;
+    font-family: 'Montserrat Alternates', serif;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .calendar-icon {
+    width: 60px;
+    height: 60px;
+    background-size: contain;
+  }
+  
+  /* Period Length Prompt */
+  .period-length-question {
+    background: #92233e;
+    padding: 1rem;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: white;
+    font-family: 'Montserrat', serif;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+    font-size: 24px;
+  }
+  
+  
+  /* About Section */
+.about {
+    background: #811d3c;
+    color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    min-height: 800px;
+    position: relative;
+    width: 99%;
+    margin: 0 auto;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .about h2 {
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 64px;
+    font-weight: lighter;
+  }
+  
+  .subheading {
+    font-family: 'Niconne', cursive;
+    font-size: 36px;
+    margin-bottom: 2rem; /* Space between subheading and about-content */
+  }
+  
+  .about-content {
+    display: grid; /* Use grid for the About and About-Dev sections */
+    grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+    gap: 2rem; /* Space between the sections */
+    margin-bottom: 2rem; /* Space between about-content and feedback buttons */
+  }
+  
+  .about-text {
+    background: #e5a5a5;
+    padding: 1rem;
+    border-radius: 15px;
+    margin:  0;
+    color: #3d121a;
+    font-size: 24px;
+  }
+
+  .about-text p {
+    text-align: center;
+    line-height: 2.5rem;
+    margin-top: 20px;
+  }
+  
+  .about-dev {
+    background: #c15e6c;
+    padding: 1rem;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    font-size: 24px;
+    text-align: center;
+    min-height: 520px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .about-dev h3 {
+    font-family: 'Niconne', cursive;
+    font-weight: lighter;
+    font-size: 36px;
+  }
+  
+  .dev-pic img {
+    width: 200px;
+    height: 200px;
+    background-color: #f5d2d2;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    padding: 10px;
+  }
+  
+  /* Feedback Buttons - Positioned under About Section */
+  .feedback-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 2rem;
+  }
+  
+  .feedback-buttons button {
+    flex: 1;
+    padding: 0.8rem;
+    background-color: #f3b3b3;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    height: 200px;
+    font-family: 'Niconne', cursive;
+    font-size: 24px;
+    font-weight: lighter;
+  }
+  
+  /* Media Query for smaller screens */
+  @media screen and (max-width: 768px) {
+    .about-content {
+      grid-template-columns: 1fr; /* Stack them vertically on small screens */
+    }
+  
+    .feedback-buttons {
+      flex-direction: column; /* Stack buttons vertically */
+      gap: 1rem;
+    }
+  }
+  
+  /* Footer */
+  footer {
+    text-align: left;
+    padding: 1rem;
+    margin-top: 2rem;
+    color: #5e1e2c;
+    font-size: 28px;
+  }
+  
+
+  @media screen and (max-width: 1000px) {
+    .grid-layout {
+      grid-template-columns: 1fr; /* stack items vertically */
+    }
+  
+    .user-info,
+    .stats,
+    .last-period,
+    .period-length-question {
+      width: 100%;
+    }
+    .about {
+      width: 90%;
+      margin: 2rem auto;
+    }
+
+    footer {
+      text-align: center;
+    }
+    .navbar {
+      width: 100vw;              /* Ensure full viewport width */
+      padding: 10px 20px;        /* Adjust padding if needed */
+      margin: 0;                 /* Prevent accidental shifts */
+      left: 0;
+      right: 0;
+      box-sizing: border-box;    /* Ensure padding doesn’t push width */
+    }
+  
+    body {
+      overflow-x: hidden;        /* Prevent sideways scroll */
+    }
+
+    .navbar a {
+      font-size: 0.9rem; /* slightly smaller text on small screens */
+    }
+  }
+  
+  @media screen and (max-width: 700px) {
+    body {
+      font-size: 14px; /* base font size reduced */
+    }
+  
+    .hero h1,
+    .logo-text {
+      font-size: 3rem;
+    }
+  
+    .cycle-day span {
+      font-size: 2.5rem;
+    }
+  
+    .cycle-day {
+      font-size: 2rem;
+    }
+  
+    .phase {
+      font-size: 1rem;
+    }
+  
+    .about h2 {
+      font-size: 2.5rem;
+    }
+  
+    .subheading {
+      font-size: 1.5rem;
+    }
+  
+    .about-text,
+    .about-dev,
+    .period-length-question,
+    .last-period,
+    .user-info,
+    .stats,
+    .navbar a,
+    .feedback-buttons button {
+      font-size: 1rem;
+    }
+  
+    footer {
+      font-size: 1rem;
+      text-align: center;
+    }
+  }
+
+  @media screen and (max-width: 1400px) {
+    .navbar {
+      width: 100vw; /* full viewport width */
+      margin: 0;     /* remove any inherited margin */
+      left: 0;       /* align to left edge */
+      right: 0;      /* align to right edge */
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    .moon {
+      transform: scale(2.2) rotate(35deg);
+      width: 5.2rem;
+      height: 5.2rem;
+    }
+  
+    .moon::before {
+      width: 5.2rem;
+      height: 5.2rem;
+      right: 1.4rem;
+    }
+  
+    .logo-text {
+      font-size: 4rem;
+    }
+  }
+  
+  @media screen and (max-width: 700px) {
+    .moon {
+      transform: scale(1.8) rotate(35deg);
+      width: 4.5rem;
+      height: 4.5rem;
+    }
+  
+    .moon::before {
+      width: 4.5rem;
+      height: 4.5rem;
+      right: 1.2rem;
+    }
+  
+    .logo-text {
+      font-size: 3rem;
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    .moon {
+      transform: scale(1.5) rotate(35deg);
+      width: 3.5rem;
+      height: 3.5rem;
+    }
+  
+    .moon::before {
+      width: 3.5rem;
+      height: 3.5rem;
+      right: 1rem;
+    }
+  
+    .logo-text {
+      font-size: 2.2rem;
+    }
+  }
+  
+  @media screen and (max-width: 450px) {
+    .logo-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;  /* Reduced gap between moon and logo text */
+    }
+  
+    .moon {
+      transform: scale(1.4) rotate(35deg);  /* Keep the moon size fixed */
+      width: 3rem;   /* Smaller moon size */
+      height: 3rem;  /* Smaller moon size */
+    }
+  
+    .moon::before {
+      width: 3rem;   /* Match moon size */
+      height: 3rem;  /* Match moon size */
+      right: 0.3rem;  /* Adjust for positioning */
+    }
+  
+    .logo-text {
+      font-size: 1.8rem !important;  /* Ensure the font size is even smaller */
+      white-space: nowrap;  /* Prevent text from wrapping */
+      display: inline-block;  /* Ensure it stays in one line */
+    }
+  }
+  
+  .cycle-list li {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 10px;
+    font-size: 20px;
+  }
+  
+  .cycle-dots {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 0.5rem;
+  }
+  
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ccc;
+  }
+  
+  .dot.red {
+    background-color: #f76b8a;
+  }
+  
+  .dot.teal {
+    background-color: #62b6b7;
+  }
+  
+  .dot.gray {
+    background-color: #e0e0e0;
+  }  
+
+  .period-length-question input,
+  .last-period input {
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    background-color: #fce4ec;
+    border: none;
+    border-radius: 12px;
+    width: 100%;
+    height: auto;
+    margin-top: 0.5rem;
+    outline: none;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+    text-align: center;
+    color: #6a1b3f;
+    box-shadow: inset 0 0 5px rgba(255, 192, 203, 0.3);
+  }
+  
+  .period-length-question input::placeholder,
+  .last-period input::placeholder {
+    color: #9e3a5f;
+    opacity: 0.6;
+    font-style: italic;
+  }  
+
+.period-length-question input:focus,
+.last-period input:focus {
+  box-shadow: 0 0 8px #ffccd5;
+  background-color: #fff0f4;
+}
+
+#periodRange {
+  font-size: 1rem;
+  margin-top: 0.8rem;
+  padding: 0.6rem 1rem;
+  background: #ffe0ea;
+  color: #6a1b3f;
+  border-radius: 10px;
+  font-weight: 500;
+  text-align: center;
+  box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.2);
+}
+
+
+.last-period button {
+  margin-top: 1rem;
+  padding: 0.9rem 1.4rem;
+  font-size: 1rem;
+  background-color: #5a0f2f; /* darker plum/pink tone */
+  color: white;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.last-period {
+  text-align: center;
+}
+
+.last-period button:hover {
+  background-color: #4a0b26;
+  transform: translateY(-2px) scale(1.03);
+}
+
+
+
+
+  
+  
+  
+  
+  

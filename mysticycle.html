@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MystiCycle</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js"> </script> 
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Niconne&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</head>
+<body>
+
+  <header class="navbar">
+    <nav class="navbar">
+        <div class="nav-left">
+          <!-- <a href="#">Login / Register</a> --> 
+        </div>
+        <div class="nav-right">
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+        </div>
+      </nav>      
+  </header>
+
+  <section class="hero">
+    <div class="logo-wrapper">
+        <h1 class="logo-text">MYSTICYCLE</h1>
+        <div class="moon"></div>
+      </div>
+  </section>
+
+    <div class="grid-layout">
+        <section class="user-info">
+          <p class="greeting">Hi @USERNAME !</p>
+          <p class="cycle-day">Today is day <span id="cycleDayNum">40</span> of your cycle</p>
+          <p class="phase" id="phaseInfo">Luteal phase | Periods in 5 days</p>
+        </section>
+
+        <section class="stats">
+          <h2>Cycle Length Statistics</h2>
+          <ul class="cycle-list">
+            <li>
+              <div>
+                Current Cycle: <span id="currentCycleInfo"></span>
+                <div class="cycle-dots" id="cycle1Dots"></div>
+              </div>
+            </li>
+            <li>
+              <div>
+                Last Cycle: <span id="lastCycleInfo"></span>
+                <div class="cycle-dots" id="cycle2Dots"></div>
+              </div>
+            </li>
+            <li>
+              <div>
+                Previous Cycle: <span id="previousCycleInfo"></span>
+                <div class="cycle-dots" id="cycle3Dots"></div>
+              </div>
+            </li>
+          </ul>
+        </section>
+    
+        <section class="period-length-question">
+          <p>How long does your period last?</p>
+          <label for="periodLength" style="color: white;">Enter number of days:</label><br> <br>
+          <input type="number" id="periodLength" min="1" max="10" style="padding: 0.4rem; margin-top: 0.5rem; border-radius: 0.5rem;">
+        </section>
+
+      <section class="last-period">
+        <h2>Your Last Period</h2>
+        <label for="lastPeriodDate" style="color: white;">Select for three months :</label><br> <br>
+        <input type="text" id="lastPeriodDate" style="padding: 0.4rem; margin-top: 0.5rem; border-radius: 0.5rem;">
+        <p id="periodRange" style="color: white; margin-top: 0.5rem;"></p>
+        <button onclick="calculateCycleInfo()">Analyze My Cycle</button>
+      </section>
+    </div>
+
+    <section class="about">
+        <h2>About MystiCycle</h2>
+        <p class="subheading">A gentle space to track your rhythm, understand your body, and embrace every cycle with calm and clarity.</p>
+        <div class="about-content">
+          <div class="about-text">
+            <p>MystiCycle is a cozy, moonlit companion for your menstrual wellness journey. It lets you log period start dates, visualize cycle lengths, and gently predicts your next period — all in a calming, dreamy interface that feels like self-care.
+              <br> Designed to be intuitive and beautiful, MystiCycle shows your current cycle day, phase (like follicular or luteal), and days left until your next period. With features like moon phase-inspired visuals, a scrollable cycle calendar, and soft animations, it helps you stay in tune with your body — no sign-up or account needed. All data stays locally on your device for a private and seamless experience.
+              <br>Whether you're tracking patterns or simply staying informed, MystiCycle transforms your cycle into a flow you feel connected to — one soft glow at a time.</p>
+          </div>
+          <div class="about-dev">
+            <h3>About the dev</h3>
+            <div class="dev-pic"><img src="dev.jpg" alt="The Picture of the Dev" /></div>
+            <p>Hi, I’m Misbah — a full-stack developer with a love for thoughtful design and meaningful digital experiences. I created MystiCycle to blend functionality with softness — a space where tech meets care.
+              <br> When I’m not coding, I’m usually sketching ideas, exploring color palettes, or dreaming up my next cozy web project.</p>
+          </div>
+        </div>
+        <div class="feedback-buttons">
+          <button onclick="window.location.href='https://forms.gle/nLsoo63acRkd1gm7A'">Submit Suggestion</button>
+          <button onclick="window.location.href='https://forms.gle/DL6NYtwYTAWgXcUa6'">Report a Bug</button>
+          <button onclick="window.location.href='https://forms.gle/DAZ4pjZVZd2FRoSB6'">Feedback</button>
+        </div>
+      </section>
+      
+
+    <footer>
+        <p>
+          <i class="fas fa-link"></i> Contact - &nbsp; &nbsp;
+          <a href="https://www.linkedin.com/in/misbah-shaikh-5169b82a5/" target="_blank" style="text-decoration: none; color: #0077b5;">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+        </p>
+      </footer>
+      <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+      <script src="script.js"></script>
+</body>
+</html>
